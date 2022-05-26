@@ -130,13 +130,13 @@ void Snake::update(struct Fruit& fruit, Mix_Chunk* chunk, SDL_Renderer* renderer
 	snake[0] = head;
 
 	check_eat_fruit(fruit,chunk);
+	Score1( renderer, "Score: " + std::to_string( score ) );
 	if ( check_eatSelf(over) || check_collision_wall(over) ) 
 	{
 		fruit.move(); 
 		dead = true;
 		
 		endGame(renderer);
-		Score( renderer, "Your score: " + std::to_string( score ) );
 		score=0;
 	    restart( renderer);
 	}
