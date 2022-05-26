@@ -19,7 +19,7 @@
     - Có tường bao quanh.
     - Có âm thanh khi rắn ăn mồi và khi rắn va vào tường hoặc thân rắn.
     - Giao diện đơn giản (chưa có menu Game).
-- **video demo:** 
+- **video demo:** [demo](https://drive.google.com/file/d/1Z1mAoxmzM9e1n7fGTrEmClQx_kDhGUhe/view?usp=sharing).
 # 4. CÁC KỸ THUẬT LẬP TRÌNH
 - Cách set up môi trường, tích hợp thư viện
 - Refactor, phân chia file và sử dụng github
