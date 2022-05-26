@@ -1,14 +1,5 @@
 #include "renderer.h"
 
-void quitSDL(SDL_Window*& window, SDL_Renderer*& renderer)
-{
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	TTF_Quit();
-	Mix_CloseAudio();
-	SDL_Quit();
-}
-
 void initSDL(SDL_Window*& window, SDL_Renderer*& renderer,  Mix_Chunk*& chunk,  Mix_Chunk*& over)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
@@ -36,6 +27,15 @@ void initSDL(SDL_Window*& window, SDL_Renderer*& renderer,  Mix_Chunk*& chunk,  
 	if (over == NULL)
 		printf("%s", Mix_GetError());
 	
+}
+
+void quitSDL(SDL_Window*& window, SDL_Renderer*& renderer)
+{
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	TTF_Quit();
+	Mix_CloseAudio();
+	SDL_Quit();
 }
 
 char* imgDirectory(std::string s)
@@ -130,7 +130,7 @@ void restart(SDL_Renderer* renderer)
 	int texW = 0;
 	int texH = 0;
 	SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
-	SDL_Rect dstrect = { WIDTH/2-100, HEIGHT/2+100, texW, texH };
+	SDL_Rect dstrect = { WIDTH/2-100, HEIGHT/2+50, texW, texH };
 	SDL_RenderCopy(renderer, texture, NULL, &dstrect);
 	TTF_CloseFont(font);
 	SDL_DestroyTexture(texture);
@@ -143,4 +143,19 @@ void draw_Background1(SDL_Window* window, SDL_Renderer* renderer)
 	SDL_Texture* texture=loadTexture(renderer,s);
 	SDL_RenderCopy(renderer,texture,NULL,NULL);
 	SDL_DestroyTexture(texture);
+}
+void Score1(SDL_Renderer* renderer, std::string s)
+{
+	TTF_Font* font = TTF_OpenFont("./fonts/Pacifico-Regular.ttf", 20);
+	SDL_Color color = { 0, 255, 255 };
+	SDL_Surface * surface = TTF_RenderText_Solid(font, &s[0], color);
+	SDL_Texture * texture = SDL_CreateTextureFromSurface(renderer, surface);
+	int texW = 0;
+	int texH = 0;
+	SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
+	SDL_Rect dstrect = { WIDTH/2-390, HEIGHT/2-290, texW, texH };
+	SDL_RenderCopy(renderer, texture, NULL, &dstrect);
+	TTF_CloseFont(font);
+	SDL_DestroyTexture(texture);
+	SDL_FreeSurface(surface);
 }
