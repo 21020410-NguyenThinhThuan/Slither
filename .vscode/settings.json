@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "string": "cpp",
+        "cstring": "cpp",
+        "iostream": "cpp"
+    },
+    "cSpell.words": [
+        "MOUSEBUTTONUP",
+        "PRESENTVSYNC"
+    ],
+    "C_Cpp.errorSquiggles": "Disabled"
+}
