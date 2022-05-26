@@ -3,9 +3,9 @@
 - Lớp: K66-CB
 - Tên dự án: **slither** (rắn săn mồi - bản cổ điển)
 # 2. HƯỚNG DẪN CÀI ĐẶT
-- Lấy source code từ github về máy: 
+- Lấy source code từ github về máy: [https://github.com/21020410-NguyenThinhThuan/Slither.git](https://github.com/21020410-NguyenThinhThuan/Slither.git)
 - Nhập trên terminal: 
-                      - git clone 
+                      - git clone [https://github.com/21020410-NguyenThinhThuan/Slither.git](https://github.com/21020410-NguyenThinhThuan/Slither.git)
                       - mingw32-make
                       - .\main.exe
 - Các thư viện sử dụng: SDL2-2.0.20, SDL_image, SDL2_mixer-2.0.4, SDL2_ttf-2.0.18, mingw64
