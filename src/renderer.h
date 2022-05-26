@@ -8,9 +8,10 @@
 #define WIDTH 800	
 #define HEIGHT 600
 
-void quitSDL(SDL_Window*& window, SDL_Renderer*& renderer);
 
 void initSDL(SDL_Window*& window, SDL_Renderer*& renderer, Mix_Chunk*& chunk,  Mix_Chunk*& over);
+
+void quitSDL(SDL_Window*& window, SDL_Renderer*& renderer);
 
 char* imgDirectory(std::string s);
 
@@ -30,3 +31,4 @@ void restart(SDL_Renderer* renderer);
 
 void draw_Background1(SDL_Window* window, SDL_Renderer* renderer);
 
+void Score1(SDL_Renderer* renderer, std::string s);
